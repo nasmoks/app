@@ -1,3 +1,12 @@
 page-home {
-
+    .input-simple-2{
+	box-sizing: border-box;
+	display:block;
+	width:100%;
+}
+.input-simple-2.input-green input:focus{border:solid 1px #A0D468!important;}
+.input-simple-2.has-icon input{text-indent:15px!important;}
+.fa.fa-user:before{content:"\f007"}
+.bottom-15{margin-bottom:15px!important;}
+    
 }

@@ -1,0 +1,91 @@
+<!--
+  Generated template for the BiblioDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-title>Revision Bot</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="margin-top:10%">
+    <ion-row>
+      <ion-item  no-lines>
+            <ion-input  class="circle" type="text" placeholder="Ask me something..."></ion-input>
+            <ion-label class="icone_circule"> <ion-icon name="search" style=" color : white"></ion-icon></ion-label>
+        </ion-item>
+    </ion-row>
+    <ion-row class="card">  
+        <ion-item style="color:gray" (click)="openModelModule(0)" >
+            <h2 item-left>
+                <b>Module 1</b>
+            </h2>
+            <div item-right>
+                <ion-item no-lines>
+                    <ion-label style="color:gray;font-size:12px;" >voir tout   <ion-icon name="md-arrow-forward"></ion-icon></ion-label>
+                </ion-item>
+            </div>
+        </ion-item>
+           <ion-list>
+           <ion-item no-lines (click)="openModelOperation()">
+               <ion-label> cours 1 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <ion-item no-lines (click)="openModelOperation()">
+                 <ion-label> cours 2 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <ion-item no-lines (click)="openModelOperation()">
+               <ion-label> cours 3 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <div  *ngIf="visibleState[0]" [@enterAnimation]>
+                 <ion-item no-lines (click)="openModelOperation()">
+               <ion-label> cours 4 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <ion-item no-lines (click)="openModelOperation()">
+                 <ion-label> cours 5 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <ion-item no-lines (click)="openModelOperation()">
+               <ion-label> cours 6 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+            </div>
+        </ion-list>
+    </ion-row>
+    <ion-row class="card">  
+        <ion-item style="color:gray" (click)="openModelModule(1)">
+            <h2 item-left>
+                <b>Module 2</b>
+            </h2>
+            <div item-right>
+                <ion-item no-lines>
+                    <ion-label style="color:gray;font-size:12px;" >voir tout   <ion-icon name="md-arrow-forward"></ion-icon></ion-label>
+                </ion-item>
+            </div>
+        </ion-item>
+        <ion-list [@enterAnimation]>
+           <ion-item no-lines (click)="openModelOperation()">
+               <ion-label> cours 1 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <ion-item no-lines (click)="openModelOperation()">
+                 <ion-label> cours 2 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <ion-item no-lines (click)="openModelOperation()">
+               <ion-label> cours 3 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <div *ngIf="visibleState[1]">
+                 <ion-item no-lines (click)="openModelOperation()">
+               <ion-label> cours 4 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <ion-item no-lines (click)="openModelOperation()">
+                 <ion-label> cours 5 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+             <ion-item no-lines (click)="openModelOperation()">
+               <ion-label> cours 6 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
+            </ion-item>
+            </div>            
+        </ion-list>
+    </ion-row>
+</ion-content>
