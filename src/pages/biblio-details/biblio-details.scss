@@ -1,20 +1,4 @@
 page-biblio-details {
-ion-header {
-    position: absolute;
-
-    .toolbar {
-    position: absolute;
-    .toolbar-background {
-      border-bottom: 0px;
-      background: white;
-                        }
-    .toolbar-title{
-    color: gray;
-        
-    }        
-    }
-    
-}
 
 .circle {
   background: #fff;
@@ -38,22 +22,6 @@ ion-header {
   position: relative;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
      
- 
-.icone_circule {
-  border-radius: 50%;
-  border: 1px solid blue;    
-  background: rgb(73, 45, 255);
-  position: absolute;
-  top: 0;
-  right : 0;
-  width: 50px;
-  height: 50px;
-  z-index: 9;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
 }

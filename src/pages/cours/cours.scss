@@ -1,0 +1,76 @@
+page-cours {
+.pressed{
+color : blue;
+font-weight: bold;
+text-decoration: underline;    
+}  
+    .released{
+color:gray;
+font-weight: normal;
+}
+.btn{
+position: absolute;
+    right: 20px;
+    text-align: right;
+    top:20px;
+    color: white;
+    height: 20%;
+    width: 10%;
+    font-size: 20px;
+}     
+.center{
+    text-align: center;    
+}
+.shadow-small{
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow:0 10px 47px 0 rgba(0,0,0,.05), 0 5px 14px 0 rgba(0,0,0,.1)!important;
+}
+
+.caption-style-3{
+    position:absolute;
+    bottom:30px;
+    left:20px;
+    right:20px;
+    color : white;
+}
+   
+.overlay-gradient-large{background: linear-gradient(to bottom, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.6) 30%,rgba(0,0,0,0.7) 60%,rgba(0,0,0,0.8) 70%,rgba(0,0,0,1) 100%);}
+  .image-details{height:30px!important; z-index:99;}
+.image-details img{
+    width:20px!important;
+    position:absolute;
+    left:0px;
+    top:12px;
+    margin-top:4px;
+}
+    .overlay, .overlay-image{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    z-index:9;
+	background-size:cover;
+    pointer-events: none;
+        opacity: 0.5;
+}
+    .progress-bar-wrapper{display:block; overflow:hidden;}
+.bottom-15{margin-bottom:15px!important;}
+.progress-bar{
+	width:0%;
+	position:absolute;
+	border-left:solid 0px #FFFFFF;
+	border-right:solid 0px #FFFFFF;
+	transition:width 500ms ease;
+}
+    .progress-bar-wrapper em{
+	position:absolute;
+	left:0px;
+	right:0px;
+	font-style:normal; 
+	display:block;
+	padding:0px 15px;
+	animation: pbar 1000ms 1;
+}
+}

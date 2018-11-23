@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MenuCommmandeProvider } from '../../providers/menu-commmande/menu-commmande';
 
 /**
  * Generated class for the BiblioPage page.
@@ -15,7 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class BiblioPage {
  years=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public provider : MenuCommmandeProvider) {
   }
 
 

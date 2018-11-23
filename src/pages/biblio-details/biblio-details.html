@@ -7,19 +7,22 @@
 <ion-header>
 
   <ion-navbar>
-      <ion-title>Revision Bot</ion-title>
-  </ion-navbar>
-
+    <ion-title> Revision Bot </ion-title>
+<ion-buttons end>
+      <button ion-button icon-only (click)="this.provider.openSettings()">
+        <div class="menu-icon" item-right><ion-icon name="md-settings"  class="header-icon"  style="font-size: 16px;"></ion-icon></div>
+      </button>
+     <button ion-button icon-only (click)="this.provider.openSearch()">
+        <div class="menu-icon" item-right><ion-icon name="md-search"  class="header-icon"  style="font-size: 16px;" ></ion-icon></div>
+      </button>
+     <button ion-button icon-only (click)="this.provider.openMenu()">
+        <div class="menu-icon" item-right><ion-icon name="md-menu"  class="header-icon" style="font-size: 16px;"></ion-icon></div>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
-
 <ion-content padding style="margin-top:10%">
-    <ion-row>
-      <ion-item  no-lines>
-            <ion-input  class="circle" type="text" placeholder="Ask me something..."></ion-input>
-            <ion-label class="icone_circule"> <ion-icon name="search" style=" color : white"></ion-icon></ion-label>
-        </ion-item>
-    </ion-row>
     <ion-row class="card">  
         <ion-item style="color:gray" (click)="openModelModule(0)" >
             <h2 item-left>
@@ -65,8 +68,8 @@
                 </ion-item>
             </div>
         </ion-item>
-        <ion-list [@enterAnimation]>
-           <ion-item no-lines (click)="openModelOperation()">
+        <ion-list>
+           <ion-item  no-lines (click)="openModelOperation()">
                <ion-label> cours 1 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
             </ion-item>
              <ion-item no-lines (click)="openModelOperation()">
@@ -75,7 +78,7 @@
              <ion-item no-lines (click)="openModelOperation()">
                <ion-label> cours 3 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
             </ion-item>
-             <div *ngIf="visibleState[1]">
+             <div *ngIf="visibleState[1]" [@enterAnimation]>
                  <ion-item no-lines (click)="openModelOperation()">
                <ion-label> cours 4 </ion-label><button style="width:50px" ion-button item-right round > voir </button>  
             </ion-item>

@@ -1,0 +1,84 @@
+<!--
+  Generated template for the CoursPresPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+ <ion-navbar>
+    <ion-title> {{NomCours}} </ion-title>
+ <ion-buttons end>
+      <button ion-button icon-only (click)="this.provider.openSettings()">
+        <div class="menu-icon" item-right><ion-icon name="md-settings"  class="header-icon"  style="font-size: 16px;"></ion-icon></div>
+      </button>
+     <button ion-button icon-only (click)="this.provider.openSearch()">
+        <div class="menu-icon" item-right><ion-icon name="md-search"  class="header-icon"  style="font-size: 16px;" ></ion-icon></div>
+      </button>
+     <button ion-button icon-only (click)="this.provider.openMenu()">
+        <div class="menu-icon" item-right><ion-icon name="md-menu"  class="header-icon" style="font-size: 16px;"></ion-icon></div>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="item shadow-small pres">    
+                    <div class="overlay overlay-gradient-large"></div>
+                    <img src="../../assets/imgs/test.jpg" class="image_cours" alt="img">
+    <div class="div_nom">
+                         <h2>{{NomCours}}</h2>
+                       
+                    </div>                    
+    <div class="div_icons">
+      <div class="icon_cours icon_1"><ion-icon class="up" name="md-people"></ion-icon><div class="middle"> Chiffre </div><div class="down"> Etudiants </div></div>
+   <div class="icon_cours icon_2"><ion-icon class="up" name="md-star-outline"></ion-icon><div class="middle"> Chiffre </div><div class="down"> Rating </div></div>
+         <div class="icon_cours icon_3"><ion-icon class="up" name="md-flag"></ion-icon><div class="middle"> Chiffre </div><div class="down"> Avancement </div></div>
+                      
+    </div>
+</div>    
+<ion-grid >   
+  <ion-row class="div_btn"> 
+    <ion-col col-6>
+        <div  class="btn_icon btn_icon_1" (click)="swiped()">
+        <ion-icon name="md-menu"></ion-icon>
+    </div>        
+    </ion-col > 
+       <ion-col col-6>
+        <div  class="btn_icon btn_icon_2">
+        <ion-icon name="md-play" style="margin-left:5px"></ion-icon>
+    </div>        
+    </ion-col >  
+  </ion-row > 
+<ion-row (click)="swiped()">  
+<ion-icon class="div_more" name="md-arrow-dropup"></ion-icon><div  class="div_more" >Afficher le contenu du cours</div>    
+</ion-row>     
+</ion-grid>
+<ion-grid *ngIf="more" class="more" [@enterAnimation]>
+<ion-row  (click)="swiped()">  
+<div  class="div_more" >Afficher moins</div> 
+<ion-icon class="div_more" name="md-arrow-dropdown"></ion-icon>   
+</ion-row> 
+<ion-row>
+<div class="list" *ngFor="let c of chapiter"> 
+<h4 class="ch_text bold  underlined">{{c.num}}</h4>    
+<ion-grid>
+<ion-row class="head">
+<ion-col col-3 >
+ <div  class="video">
+        <ion-icon name="md-play" style="margin-left:5px"></ion-icon>
+</div> 
+</ion-col>
+    <ion-col col-9><h5 class="bottom ch_text bold">{{c.nom}}</h5></ion-col>
+</ion-row>
+<ion-row>
+<ion-col offset-3 col-9>
+<p class="ch_text thin" >{{c.contenu}}</p>   
+</ion-col>
+</ion-row>    
+</ion-grid>          
+</div>
+</ion-row>    
+</ion-grid>    
+</ion-content>

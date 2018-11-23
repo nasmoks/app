@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, PopoverController, NavController, NavParams } from 'ionic-angular';
-import { trigger, state, style, transition, animate } from '@angular/animations'
+import { IonicPage, Platform, PopoverController, NavController, NavParams } from 'ionic-angular';
+import { trigger, style, transition, animate } from '@angular/animations'
+import { MenuCommmandeProvider } from '../../providers/menu-commmande/menu-commmande';
 
 /**
  * Generated class for the BiblioDetailsPage page.
@@ -17,12 +18,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     trigger(
       'enterAnimation', [
         transition(':enter', [
-          style({transform: 'translateY(100%)', opacity: 1}),
-          animate('400ms', style({transform: 'translateY(0)', opacity: 1}))
+          style({transform: 'translateY(-50%) rotateX(-90deg)', opacity: 0}),
+          animate('400ms', style({transform: 'translateY(0) rotateX(0)', opacity: 1}))
         ]),
         transition(':leave', [
-          style({transform: 'translateY(0)', opacity: 1}),
-          animate('400ms', style({transform: 'translateY(100%)', opacity: 1}))
+          style({transform: 'translateY(0) rotateX(0deg)', opacity: 1}),
+          animate('400ms', style({transform: 'translateY(-50%) rotateX(-90deg)', opacity: 0}))
         ])
       ]
     )
@@ -31,7 +32,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class BiblioDetailsPage {
   visibleState = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams , public popoverCtrl : PopoverController) {
+  constructor(public platform: Platform,public navCtrl: NavController, public navParams: NavParams , public popoverCtrl : PopoverController, public provider : MenuCommmandeProvider) {
   }
 
   ionViewDidLoad() {
@@ -46,7 +47,18 @@ export class BiblioDetailsPage {
   }
     openModelOperation(){
     let popover = this.popoverCtrl.create('ModelOperationPage');  
-      popover.present();
+        
+let ev = {
+  target : {
+    getBoundingClientRect : () => {
+      return {
+        top: this.platform.height()+''
+      };
+    }
+  }
+};
+ console.log(this.platform.height()-100);
+      popover.present({ev});
   }
 
 }

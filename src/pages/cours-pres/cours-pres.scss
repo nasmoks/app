@@ -1,0 +1,160 @@
+page-cours-pres {
+.center{
+    text-align: center;    
+}
+.shadow-small{
+    margin: 10px;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow:0 10px 47px 0 rgba(0,0,0,.05), 0 5px 14px 0 rgba(0,0,0,.1)!important;
+}
+
+.image_cours{
+left:0px;    
+height: 35%;
+width: 100%;    
+}
+.div_nom{
+position: relative;
+left:0px;  
+padding-top: 10%;
+overflow: scroll;
+height: 25%;
+text-align: center;   
+}  
+.div_icons{
+text-align: center;
+position: relative;
+left:0px; 
+width: 90%;    
+height: 30%;
+margin-left: 5%;
+}    
+.icon_cours{    
+position: absolute;
+top:0px;
+width: 33%;   
+height: 80%;    
+} 
+.icon_1{     
+left: 0;
+} 
+  .icon_2{
+top:0px;      
+left: 33%;
+  }
+    .icon_3{
+top:0px;        
+left: 66%;  
+}
+.up{
+height: 50%;
+margin-top: 10%;    
+font-size: 30px; 
+color : gray;    
+}    
+.down{
+height: 20%;
+color : gray;    
+font-weight:thin;    
+font-size: 10px;    
+} 
+.middle{
+height: 30%;    
+font-weight: bold;
+font-size: 14px;    
+}
+.div_btn{
+position:relative;
+top: -40px;  
+}
+    
+.div1,.div2{
+width: 50%;
+}    
+
+.btn_icon{
+border-radius: 50px;
+  height: 50px;
+ font-size: 25px;
+ padding-top: 10px;    
+  width: 50px;
+color:white;    
+    outline-color: black;
+ box-shadow:0 10px 47px 0 rgba(0,0,0,.05), 0 5px 14px 0 rgba(0,0,0,.1)!important;
+  text-align: center;
+
+}
+
+.btn_icon_1{
+background-color: #528ff2;    
+position: relative;
+left: 33%;
+}  
+.btn_icon_2{
+background-color: #73e288;    
+position: relative;
+left: 33%;
+}  
+.div_more{
+width: 100%; 
+opacity: 0.6;    
+font-weight: thin;    
+text-align: center;
+}  
+.more{
+background-color: white;    
+z-index: 10;
+position: absolute;
+top:0;
+left: 0;
+height: auto !important;
+min-height: 100%; 
+
+}
+.list{
+width: 90%;
+margin-left: 5%;    
+
+}  
+  
+.underlined{
+width: 80%;    
+border-bottom: 1px solid gray;
+} 
+ 
+.video{
+position: relative;
+top: 10px;    
+border-radius: 50px;
+  height: 50px;
+ font-size: 25px;
+ padding-top: 7px;    
+  width: 50px;
+color:gray;
+background-color: transparent;
+border: 3px solid gray;
+ box-shadow:0 10px 47px 0 rgba(0,0,0,.05) , 0 5px 14px 0 rgba(0,0,0,.1)!important;
+    
+  text-align: center;
+}    
+.head{       
+height: 70px;    
+}    
+.ch_text{
+overflow: scroll;    
+text-align:justify;
+color: gray; 
+}   
+.bottom{
+position: relative;
+top: 30px;
+}  
+.thin{
+font-weight: thin;    
+font-size: 13px;    
+}
+    .bold{
+font-weight: bold;
+}    
+}

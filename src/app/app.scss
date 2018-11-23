@@ -17,7 +17,53 @@
 ion-header ion-icon.back-button-icon.icon {
  color : blue;  
 }
+.toolbar-title.toolbar-title-md, 
+.toolbar-title.toolbar-title-ios, 
+.toolbar-title.toolbar-title-wp { text-align: left;font-size: 16px;}
+ion-header .toolbar-background {
+  background-color: white;
+}
 .rotate-90 {
   display: inline-block; 
   transform: rotate(90deg);
 }
+.menu-icon {
+  background: #fff;
+  border-radius: 35px;
+  display: inline-block;
+  height: 35px;
+  position:relative;
+  width: 35px;
+ top: auto;
+line-height:36px; 
+ box-shadow:0 10px 47px 0 rgba(0,0,0,.05), 0 5px 14px 0 rgba(0,0,0,.1)!important;
+  text-align: center;
+}
+.header-icon{
+margin-top: 35%;
+font-weight: bold;
+}
+.opacity-50{opacity:0.5;}
+.menu-bottom{
+    transform:translateY(110%);
+}
+.menu-box{ 
+    overflow: auto;
+    overflow-x:hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color:#FFFFFF;
+    z-index:9999;
+    border-radius:15px;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+  background: #fff;
+  display: inline-block;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23), 0 3px 6px rgba(0,0,0,0.46);
+
+
+}
+
+     
+

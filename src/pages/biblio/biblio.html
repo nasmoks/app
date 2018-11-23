@@ -7,15 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-  </ion-navbar>
-
+    <ion-title> Bibliotheque</ion-title>
+<ion-buttons end>
+      <button ion-button icon-only (click)="this.provider.openSettings()">
+        <div class="menu-icon" item-right><ion-icon name="md-settings"  class="header-icon"  style="font-size: 16px;"></ion-icon></div>
+      </button>
+     <button ion-button icon-only (click)="this.provider.openSearch()">
+        <div class="menu-icon" item-right><ion-icon name="md-search"  class="header-icon"  style="font-size: 16px;" ></ion-icon></div>
+      </button>
+     <button ion-button icon-only (click)="this.provider.openMenu()">
+        <div class="menu-icon" item-right><ion-icon name="md-menu"  class="header-icon" style="font-size: 16px;"></ion-icon></div>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 
 <ion-content padding style="margin-top:10%;">
-<span ion-item  no-lines>
-    <ion-title item-left style="color: blue">Bibliotheque</ion-title><div class="circle" item-right><ion-icon name="md-search" color="primary" style="font-weight: bold;margin-top:5px"></ion-icon></div>
-</span>
 <div ion-item class="card"  no-lines>
 <a ion-item>
 <h3 item-left><b>System LMD</b></h3><div item-right><h4><b>37</b></h4><h5>Fichiers</h5></div>    

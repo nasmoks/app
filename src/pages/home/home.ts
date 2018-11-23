@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { MenuCommmandeProvider } from '../../providers/menu-commmande/menu-commmande';
 
 
 @Component({
@@ -7,17 +8,20 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController) {
+ title='Home';
+  constructor(public navCtrl: NavController, public provider : MenuCommmandeProvider) {
 
   }
     openBib() {
    this.navCtrl.push('BiblioPage');
-
 }
  
  openBibDet() {
    this.navCtrl.push('BiblioDetailsPage');
+
+}
+openCours() {
+   this.navCtrl.push('CoursPage');
 
 }
 }
